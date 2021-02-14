@@ -1,0 +1,43 @@
+name: portfolio
+description: Abdul Hakeem Portfolio
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+  url_launcher: ^5.7.10
+  carousel_slider: ^3.0.0
+  responsive_flutter: ^0.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+# The following section is specific to Flutter.
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: YellowTail
+      fonts:
+        - asset: assets/fonts/yellowtail.ttf
+        - asset: assets/fonts/yellowtail.ttf
+    - family:  Roboto
+      fonts:
+        - asset: assets/fonts/roboto.ttf
