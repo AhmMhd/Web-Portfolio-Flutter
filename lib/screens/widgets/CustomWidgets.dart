@@ -91,10 +91,6 @@ class PortfolioWidget extends StatelessWidget {
         .size;
 
     return Container(
-        width: MediaQuery
-            .of(context)
-            .size
-            .width,
         margin: EdgeInsets.symmetric(horizontal: 5.0),
         decoration: BoxDecoration(
           color: item.color,
@@ -104,53 +100,36 @@ class PortfolioWidget extends StatelessWidget {
             ),
           ),
         ),
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              width: 20,
+            CircleAvatar(
+              radius: 50,
+              backgroundColor: Colors.transparent,
+              child: ClipOval(
+                child: Image.asset(
+                  "assets/images/${item.image}",
+                  width: screenSize.width / 6,
+                  height: screenSize.width / 6,
+                ),
+              ),
+            ),
+            Text(
+              item.name,
+              style: TextStyle(
+                fontSize: isMobile() ? ResponsiveFlutter.of(context).fontSize(2) : ResponsiveFlutter.of(context).fontSize(2.5),
+                color: Colors.black,
+              ),
             ),
             SizedBox(
-              width: 20,
+              height: 10,
             ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CircleAvatar(
-                    radius: 100,
-                    backgroundColor: Colors.transparent,
-                    child: ClipOval(
-                      child: Image.asset(
-                        "assets/images/${item.image}",
-                        width: screenSize.width / 8,
-                        height: screenSize.width / 8,
-                      ),
-                    ),
-                  ),
-                  Text(
-                    item.name,
-                    style: TextStyle(
-                      fontSize: ResponsiveFlutter.of(context).fontSize(
-                        2,
-                      ),
-                      color: Colors.black,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    item.description,
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                      fontSize: ResponsiveFlutter.of(context).fontSize(
-                        1.2,
-                      ),
-                      color: Colors.black,
-                    ),
-                  )
-                ],
+            Text(
+              item.description,
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                fontSize: isMobile() ?ResponsiveFlutter.of(context).fontSize(1,) : ResponsiveFlutter.of(context).fontSize(1.5,),
+                color: Colors.black,
               ),
             )
           ],

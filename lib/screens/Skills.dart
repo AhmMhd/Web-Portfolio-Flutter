@@ -1,18 +1,22 @@
-import 'dart:html';
-
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:io' show Platform, stdout;
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/screens/widgets/CustomWidgets.dart';
+import 'package:portfolio/util/utils.dart';
 
 class Skills extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
+
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          SizedBox(height: 40,),
+          SizedBox(
+            height: 40,
+          ),
           Text(
             "Skills",
             style: TextStyle(
@@ -20,24 +24,54 @@ class Skills extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          SizedBox(height: 30,),
+          SizedBox(
+            height: 30,
+          ),
           Expanded(
             child: IgnorePointer(
               child: GridView.count(
-                padding: EdgeInsets.symmetric(horizontal: screenSize.width/30),
-                crossAxisCount: 5,
-                crossAxisSpacing: screenSize.width/30,
-                mainAxisSpacing: screenSize.width/30,
+                padding:
+                    EdgeInsets.symmetric(horizontal: screenSize.width / 30),
+                crossAxisCount: (isMobile()) ? 3 : 5,
+                crossAxisSpacing: screenSize.width / 30,
+                mainAxisSpacing: screenSize.width / 30,
                 children: [
-                  SkillWidget(text: "Android",iconName: "ic_android",),
-                  SkillWidget(text: "Java",iconName: "ic_java",),
-                  SkillWidget(text: "Kotlin",iconName: "ic_kotlin",),
-                  SkillWidget(text: "Dart",iconName: "ic_dart",),
-                  SkillWidget(text: "Firebase",iconName: "ic_firebase",),
-                  SkillWidget(text: "Flutter",iconName: "ic_flutter",),
-                  SkillWidget(text: "Jenkins",iconName: "ic_jenkins",),
-                  SkillWidget(text: "Android Jetpack",iconName: "ic_jetpack",),
-                  SkillWidget(text: "Git",iconName: "ic_github",),
+                  SkillWidget(
+                    text: "Android",
+                    iconName: "ic_android",
+                  ),
+                  SkillWidget(
+                    text: "Java",
+                    iconName: "ic_java",
+                  ),
+                  SkillWidget(
+                    text: "Kotlin",
+                    iconName: "ic_kotlin",
+                  ),
+                  SkillWidget(
+                    text: "Dart",
+                    iconName: "ic_dart",
+                  ),
+                  SkillWidget(
+                    text: "Firebase",
+                    iconName: "ic_firebase",
+                  ),
+                  SkillWidget(
+                    text: "Flutter",
+                    iconName: "ic_flutter",
+                  ),
+                  SkillWidget(
+                    text: "Jenkins",
+                    iconName: "ic_jenkins",
+                  ),
+                  SkillWidget(
+                    text: "Android Jetpack",
+                    iconName: "ic_jetpack",
+                  ),
+                  SkillWidget(
+                    text: "Git",
+                    iconName: "ic_github",
+                  ),
                 ],
               ),
             ),
@@ -47,4 +81,3 @@ class Skills extends StatelessWidget {
     );
   }
 }
-

@@ -1,4 +1,5 @@
-
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> launchURL(String url) async {
@@ -7,4 +8,9 @@ Future<void> launchURL(String url) async {
   } else {
     throw 'Could not launch $url';
   }
+}
+
+bool isMobile() {
+  return (defaultTargetPlatform == TargetPlatform.android ||
+      defaultTargetPlatform == TargetPlatform.iOS);
 }

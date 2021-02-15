@@ -39,7 +39,7 @@ class ContactInfo extends StatelessWidget {
             ),
             ContactField(iconName: "ic_email",text: "ahm.mhd78@gmail.com",),
             SizedBox(height: 10,),
-            ContactField(iconName: "ic_phone",text: "0312-2494197",),
+            ContactField(iconName: "ic_phone",text: "+92-312-2494197",),
             SizedBox(
               height: 30,
             ),
