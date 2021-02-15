@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Abdul Hakeem',
       theme: ThemeData(
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: 'Roboto',
         primarySwatch: Colors.blue,
       ),

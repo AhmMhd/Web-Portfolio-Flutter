@@ -20,19 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c43f9af-bd62-47f8-9bb1-6da6d0f7142c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Code Cache/wasm/index-dir/the-real-index" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Code Cache/wasm/index-dir/the-real-index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/app.dill.deps" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/app.dill.deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/dart2js.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/dart2js.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/dart2js.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/dart2js.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/flutter_assets.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/main.dart.js" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/main.dart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/web_release_bundle.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/39e292ee2dad55584d77ce3f6ca74ef5/web_release_bundle.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/ContactInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/ContactInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/assets/NOTICES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/flutter_service_worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/flutter_service_worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/main.dart.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/main.dart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Dashboard.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Portfolio.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Portfolio.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Skills.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Skills.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/widgets/CustomWidgets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/widgets/CustomWidgets.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/util/utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/util/utils.dart" afterDir="false" />
     </list>
@@ -61,7 +69,7 @@
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="dart.settings" />
+    <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager">
@@ -96,34 +104,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1324" height="218" key="GridCell.Tab.0.bottom" timestamp="1613374953007">
+    <state width="1324" height="155" key="GridCell.Tab.0.bottom" timestamp="1613383973475">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.800@0.25.1440.800" timestamp="1613325746488" />
-    <state width="1324" height="218" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1613374953007" />
-    <state width="1324" height="218" key="GridCell.Tab.0.center" timestamp="1613374953004">
+    <state width="1324" height="155" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1613383973475" />
+    <state width="1324" height="155" key="GridCell.Tab.0.center" timestamp="1613383973474">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.800@0.25.1440.800" timestamp="1613325746488" />
-    <state width="1324" height="218" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1613374953004" />
-    <state width="1324" height="218" key="GridCell.Tab.0.left" timestamp="1613374953002">
+    <state width="1324" height="155" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1613383973474" />
+    <state width="1324" height="155" key="GridCell.Tab.0.left" timestamp="1613383973474">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.800@0.25.1440.800" timestamp="1613325746488" />
-    <state width="1324" height="218" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1613374953002" />
-    <state width="1324" height="218" key="GridCell.Tab.0.right" timestamp="1613374953006">
+    <state width="1324" height="155" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1613383973474" />
+    <state width="1324" height="155" key="GridCell.Tab.0.right" timestamp="1613383973475">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.800@0.25.1440.800" timestamp="1613325746488" />
-    <state width="1324" height="218" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1613374953006" />
-    <state x="210" y="31" width="977" height="737" key="SettingsEditor" timestamp="1613371088230">
+    <state width="1324" height="155" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1613383973475" />
+    <state x="210" y="31" width="977" height="737" key="SettingsEditor" timestamp="1613377176070">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="221" y="51" key="SettingsEditor/0.25.1440.800@0.25.1440.800" timestamp="1613318281933" />
-    <state x="210" y="31" width="977" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1613371088230" />
-    <state x="346" y="88" width="672" height="678" key="search.everywhere.popup" timestamp="1613375104230">
+    <state x="210" y="31" width="977" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1613377176070" />
+    <state x="346" y="88" width="672" height="678" key="search.everywhere.popup" timestamp="1613383780523">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="88" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1613375104230" />
+    <state x="346" y="88" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1613383780523" />
   </component>
 </project>

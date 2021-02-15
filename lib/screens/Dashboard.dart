@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/screens/ContactInfo.dart';
+import 'package:portfolio/util/utils.dart';
 import 'package:responsive_flutter/responsive_flutter.dart';
 
 import 'Skills.dart';
@@ -50,12 +51,15 @@ class Dashboard extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Text(
-              "A forward-thinking developer offering more than three years of experience building, integrating and supporting Android applications for mobile.",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: ResponsiveFlutter.of(context).fontSize(1.5),
-                color: Colors.grey[200],
+            Container(
+              margin: isMobile() ?EdgeInsets.symmetric(horizontal: 50) :EdgeInsets.symmetric(horizontal: 100),
+              child: Text(
+                "A forward-thinking developer offering more than three years of experience building, integrating and supporting Android applications for mobile.",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: ResponsiveFlutter.of(context).fontSize(1.5),
+                  color: Colors.grey[200],
+                ),
               ),
             )
           ],

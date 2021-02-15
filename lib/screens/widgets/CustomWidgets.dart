@@ -86,12 +86,10 @@ class PortfolioWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery
-        .of(context)
-        .size;
+    var screenSize = MediaQuery.of(context).size;
 
     return Container(
-        margin: EdgeInsets.symmetric(horizontal: 5.0),
+        margin: EdgeInsets.symmetric(horizontal: 12.0),
         decoration: BoxDecoration(
           color: item.color,
           borderRadius: BorderRadius.all(
@@ -117,19 +115,30 @@ class PortfolioWidget extends StatelessWidget {
             Text(
               item.name,
               style: TextStyle(
-                fontSize: isMobile() ? ResponsiveFlutter.of(context).fontSize(2) : ResponsiveFlutter.of(context).fontSize(2.5),
+                fontSize: isMobile()
+                    ? ResponsiveFlutter.of(context).fontSize(2)
+                    : ResponsiveFlutter.of(context).fontSize(2.5),
                 color: Colors.black,
               ),
             ),
             SizedBox(
               height: 10,
             ),
-            Text(
-              item.description,
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                fontSize: isMobile() ?ResponsiveFlutter.of(context).fontSize(1,) : ResponsiveFlutter.of(context).fontSize(1.5,),
-                color: Colors.black,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                item.description,
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  fontSize: isMobile()
+                      ? ResponsiveFlutter.of(context).fontSize(
+                          1.2,
+                        )
+                      : ResponsiveFlutter.of(context).fontSize(
+                          1.5,
+                        ),
+                  color: Colors.black,
+                ),
               ),
             )
           ],
@@ -145,46 +154,48 @@ class SkillWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery
-        .of(context)
-        .size;
-    return Container(
-      decoration: BoxDecoration(
-          color: Colors.blue[100],
-          borderRadius: BorderRadius.all(Radius.circular(6))),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            'assets/images/$iconName.png',
-            height: screenSize.width / 10,
-            width: screenSize.width / 10,
-            fit: BoxFit.cover,
-          ),
-          Text(
-            this.text,
-            style: TextStyle(
-              fontSize: ResponsiveFlutter.of(context).fontSize(
-                1.2,
-              ),
+    var screenSize = MediaQuery.of(context).size;
+    return Card(
+      elevation: 30,
+      shadowColor: Colors.blue[100],
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.blue[100],
+            borderRadius: BorderRadius.all(Radius.circular(6))),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/${iconName}.png',
+              height: screenSize.width / 10,
+              width: screenSize.width / 10,
+              fit: BoxFit.cover,
             ),
-          )
-        ],
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: ResponsiveFlutter.of(context).fontSize(
+                  1.2,
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
 }
 
 class ContactField extends StatelessWidget {
-
   final String iconName;
   final String text;
+
   ContactField({@required this.iconName, @required this.text});
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       width: 300,
       padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
@@ -211,6 +222,7 @@ class ContactField extends StatelessWidget {
           )
         ],
       ),
-    );;
+    );
+    ;
   }
 }

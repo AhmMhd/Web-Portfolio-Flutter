@@ -26,7 +26,7 @@ class Portfolio extends StatelessWidget {
           CarouselSlider(
             options: CarouselOptions(
               autoPlayCurve: Curves.fastOutSlowIn,
-              viewportFraction: isMobile() ? 1 : 0.4,
+              viewportFraction: isMobile() ? 0.8 : 0.5,
               height: isMobile() ? 300 : 400,
               autoPlay: true,
               autoPlayInterval: Duration(seconds: 3),

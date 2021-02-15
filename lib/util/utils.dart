@@ -14,3 +14,4 @@ bool isMobile() {
   return (defaultTargetPlatform == TargetPlatform.android ||
       defaultTargetPlatform == TargetPlatform.iOS);
 }
+
