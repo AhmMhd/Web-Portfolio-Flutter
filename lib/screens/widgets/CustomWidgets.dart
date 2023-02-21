@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/portfolio.dart';
+import 'package:portfolio/screens/MoreAboutMe.dart';
 import 'package:portfolio/theme/AppFonts.dart';
+import 'package:portfolio/util/AppNavigator.dart';
 import 'package:portfolio/util/utils.dart';
 import 'package:responsive_flutter/responsive_flutter.dart';
 import 'dart:developer' as developer;
@@ -241,9 +243,10 @@ class _RoundedButtonWithRightActionArrowState
 
   @override
   Widget build(BuildContext context) {
-    developer.log("onn build");
     return InkWell(
-      onTap:(){},
+      onTap: () {
+        AppNavigator.navigate(context, MoreAboutMe());
+      },
       onHover: _handleHover,
       hoverColor: AppColors.appYellow,
       child: Container(
