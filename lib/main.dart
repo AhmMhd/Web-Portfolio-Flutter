@@ -15,14 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Abdul Hakeem',
       theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: AppFonts.poppins,
-        primarySwatch: Colors.blue
-      ),
-      home: PageView(
-        scrollDirection: Axis.vertical,
-        children: [Dashboard(), Skills(), Portfolio(), ContactInfo()],
-      ),
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          fontFamily: AppFonts.poppins,
+          primarySwatch: Colors.blue),
+      home: Dashboard(),
     );
   }
 }

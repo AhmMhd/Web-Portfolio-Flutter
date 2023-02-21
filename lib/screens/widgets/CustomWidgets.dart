@@ -3,7 +3,7 @@ import 'package:portfolio/models/portfolio.dart';
 import 'package:portfolio/theme/AppFonts.dart';
 import 'package:portfolio/util/utils.dart';
 import 'package:responsive_flutter/responsive_flutter.dart';
-
+import 'dart:developer' as developer;
 import '../../theme/AppColors.dart';
 
 class ImageButton extends StatelessWidget {
@@ -230,44 +230,64 @@ class ContactField extends StatelessWidget {
   }
 }
 
-class RoundedButtonWithRightActionArrow extends StatelessWidget {
+class _RoundedButtonWithRightActionArrowState
+    extends State<RoundedButtonWithRightActionArrow> {
+  bool _isMouseHover = false;
+
+  void _handleHover(bool newValue) {
+    _isMouseHover = newValue;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: EdgeInsets.all(32),
-        width: 220,
-        height: 48,
-        decoration: BoxDecoration(
-            border: Border.all(color: AppColors.appYellow),
-            borderRadius: BorderRadius.circular(30)),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-                child: Container(
-              child: Text(
-                "MORE ABOUT ME",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: AppFonts.poppinsBold
+    developer.log("onn build");
+    return InkWell(
+      onTap:(){},
+      onHover: _handleHover,
+      hoverColor: AppColors.appYellow,
+      child: Container(
+          margin: EdgeInsets.all(32),
+          width: 220,
+          height: 48,
+          decoration: BoxDecoration(
+              color: (_isMouseHover) ? AppColors.appYellow : AppColors.appBlack,
+              border: Border.all(color: AppColors.appYellow),
+              borderRadius: BorderRadius.circular(30)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                  child: Container(
+                child: Text(
+                  "MORE ABOUT ME",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: AppFonts.poppinsBold),
                 ),
-              ),
-            )),
-            Container(
-              width: 48,
-              height: 48,
-              child: Icon(
-                Icons.arrow_forward,
-                color: Colors.white,
-              ),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(32),
-                  color: AppColors.appYellow),
-            )
-          ],
-        ));
+              )),
+              Container(
+                width: 48,
+                height: 48,
+                child: Icon(
+                  Icons.arrow_forward,
+                  color: Colors.white,
+                ),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(32),
+                    color: AppColors.appYellow),
+              )
+            ],
+          )),
+    );
   }
+}
+
+class RoundedButtonWithRightActionArrow extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() =>
+      _RoundedButtonWithRightActionArrowState();
 }
