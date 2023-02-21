@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/screens/widgets/CustomWidgets.dart';
 import 'package:portfolio/util/utils.dart';
+import 'package:portfolio/theme/AppColors.dart';
 
 class Skills extends StatelessWidget {
   @override
@@ -11,7 +12,7 @@ class Skills extends StatelessWidget {
 
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.appBlack,
       body: Column(
         children: [
           SizedBox(

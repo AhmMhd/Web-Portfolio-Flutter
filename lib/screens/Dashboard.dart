@@ -45,7 +45,7 @@ class Dashboard extends StatelessWidget {
                     "I'M Abdul Hakeem",
                     style: TextStyle(
                       fontSize: ResponsiveFlutter.of(context).fontSize(4),
-                      color: ColorConstants.appYellow
+                      color: AppColors.appYellow
                     ),
                   ),
                   Text(
