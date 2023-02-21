@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/screens/widgets/CustomWidgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../theme/AppColors.dart';
+
 class ContactInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.appBlack,
       body: Container(
         width: double.infinity,
         child: Column(

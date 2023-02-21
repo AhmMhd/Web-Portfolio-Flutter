@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/screens/ContactInfo.dart';
-import 'package:portfolio/util/utils.dart';
+import 'package:portfolio/screens/widgets/CustomWidgets.dart';
+import 'package:portfolio/theme/AppColors.dart';
 import 'package:responsive_flutter/responsive_flutter.dart';
 
+import '../theme/AppFonts.dart';
 import 'Skills.dart';
 
 class Dashboard extends StatelessWidget {
@@ -10,61 +11,70 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/bg_main.png'),
-            fit: BoxFit.cover,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/bg_waves.png'),
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              radius: 100,
-              backgroundColor: Colors.transparent,
-              child: ClipOval(
-                child: Image.asset(
-                  "assets/images/avatar.jpg",
-                  width: 200,
-                  height: 200,
-                  fit: BoxFit.cover,
+          width: double.infinity,
+          child: Row(
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                      child: Container(
+                        margin: EdgeInsets.all(62.0),
+                        width: 400,
+                        child: ClipRRect(
+                          child: Image.asset(
+                            "assets/images/avatar.jpg",
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ))
+                ],
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                  Text(
+                  "I'M ABDUL HAKEEM",
+                  style: TextStyle(
+                      fontSize: ResponsiveFlutter.of(context).fontSize(4),
+                      color: AppColors.appYellow,
+                      fontFamily: AppFonts.poppinsBold,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+                Text(
+                  "SR. SOFTWARE ENGINEER - ANDROID",
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: ResponsiveFlutter.of(context).fontSize(2),
+                  color: Colors.white,
+                  fontFamily: AppFonts.poppinsBold,
                 ),
               ),
-            ),
-            Text(
-              "Abdul Hakeem Mehmood",
-              style: TextStyle(
-                fontFamily: "YellowTail",
-                fontSize: ResponsiveFlutter.of(context).fontSize(3.5),
-                color: Colors.white,
-              ),
-            ),
-            Text(
-              "Sr. Android Application Developer",
-              style: TextStyle(
-                fontSize: ResponsiveFlutter.of(context).fontSize(2),
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              margin: isMobile() ?EdgeInsets.symmetric(horizontal: 50) :EdgeInsets.symmetric(horizontal: 100),
-              child: Text(
-                "A forward-thinking developer offering more than three years of experience building, integrating and supporting Android applications for mobile.",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: ResponsiveFlutter.of(context).fontSize(1.5),
-                  color: Colors.grey[200],
+              Container(
+                margin: EdgeInsets.fromLTRB(32, 12, 32, 0),
+                child: Text(
+                  "I am pakistan based senior Android developer with more than 6 years of experience in building android apps for mobile",
+                  style: TextStyle(
+                      fontSize: ResponsiveFlutter.of(context).fontSize(1.2),
+                      color: Colors.white),
                 ),
               ),
-            )
-          ],
-        ),
-      ),
+              RoundedButtonWithRightActionArrow()
+            ],
+          ))
+      ],
+    )),
     );
   }
 }
