@@ -43,15 +43,30 @@ class Dashboard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                  Text(
-                  "I'M ABDUL HAKEEM",
-                  style: TextStyle(
-                      fontSize: ResponsiveFlutter.of(context).fontSize(4),
-                      color: AppColors.appYellow,
-                      fontFamily: AppFonts.poppinsBold,
-                      fontWeight: FontWeight.bold
-                  ),
-                ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "I'M ",
+                          style: TextStyle(
+                              fontSize: ResponsiveFlutter.of(context).fontSize(4),
+                              color: Colors.white,
+                              fontFamily: AppFonts.poppinsBold,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        Text(
+                          "ABDUL HAKEEM",
+                          style: TextStyle(
+                              fontSize: ResponsiveFlutter.of(context).fontSize(4),
+                              color: AppColors.appYellow,
+                              fontFamily: AppFonts.poppinsBold,
+                              fontWeight: FontWeight.bold
+                          ),
+                        )
+                      ],
+                    ),
                 Text(
                   "SR. SOFTWARE ENGINEER - ANDROID",
                   style: TextStyle(
