@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/portfolio.dart';
+import 'package:portfolio/theme/AppFonts.dart';
 import 'package:portfolio/util/utils.dart';
 import 'package:responsive_flutter/responsive_flutter.dart';
+
+import '../../theme/AppColors.dart';
 
 class ImageButton extends StatelessWidget {
   final String imageName;
@@ -224,5 +227,47 @@ class ContactField extends StatelessWidget {
       ),
     );
     ;
+  }
+}
+
+class RoundedButtonWithRightActionArrow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: EdgeInsets.all(32),
+        width: 220,
+        height: 48,
+        decoration: BoxDecoration(
+            border: Border.all(color: AppColors.appYellow),
+            borderRadius: BorderRadius.circular(30)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+                child: Container(
+              child: Text(
+                "MORE ABOUT ME",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: AppFonts.poppinsBold
+                ),
+              ),
+            )),
+            Container(
+              width: 48,
+              height: 48,
+              child: Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+              ),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(32),
+                  color: AppColors.appYellow),
+            )
+          ],
+        ));
   }
 }

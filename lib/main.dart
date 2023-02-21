@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Abdul Hakeem',
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: AppFonts.roboto,
+        fontFamily: AppFonts.poppins,
         primarySwatch: Colors.blue
       ),
       home: PageView(
