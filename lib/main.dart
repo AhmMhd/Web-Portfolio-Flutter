@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/screens/ContactInfo.dart';
 import 'package:portfolio/screens/Dashboard.dart';
+import 'package:portfolio/screens/MoreAboutMe.dart';
 import 'package:portfolio/screens/Portfolio.dart';
 import 'package:portfolio/screens/Skills.dart';
 import 'package:portfolio/theme/AppFonts.dart';
