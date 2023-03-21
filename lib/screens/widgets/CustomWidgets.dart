@@ -20,8 +20,8 @@ class ImageButton extends StatelessWidget {
       onTap: onTap,
       splashColor: Colors.brown.withOpacity(0.5),
       child: Ink(
-        height: 60,
-        width: 60,
+        height: 42,
+        width: 42,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/$imageName.png'),
@@ -235,6 +235,13 @@ class ContactField extends StatelessWidget {
 class _RoundedButtonWithRightActionArrowState
     extends State<RoundedButtonWithRightActionArrow> {
   bool _isMouseHover = false;
+  String _text;
+  IconData _icon;
+
+  _RoundedButtonWithRightActionArrowState(String text, IconData icon){
+    _text = text;
+    _icon = icon;
+  }
 
   void _handleHover(bool newValue) {
     _isMouseHover = newValue;
@@ -248,9 +255,8 @@ class _RoundedButtonWithRightActionArrowState
         AppNavigator.navigate(context, MoreAboutMe());
       },
       onHover: _handleHover,
-      hoverColor: AppColors.appYellow,
+      // hoverColor: AppColors.appYellow,
       child: Container(
-          margin: EdgeInsets.all(32),
           width: 220,
           height: 48,
           decoration: BoxDecoration(
@@ -264,7 +270,7 @@ class _RoundedButtonWithRightActionArrowState
               Expanded(
                   child: Container(
                 child: Text(
-                  "MORE ABOUT ME",
+                  _text,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
@@ -276,7 +282,7 @@ class _RoundedButtonWithRightActionArrowState
                 width: 48,
                 height: 48,
                 child: Icon(
-                  Icons.arrow_forward,
+                  _icon,
                   color: Colors.white,
                 ),
                 decoration: BoxDecoration(
@@ -290,7 +296,16 @@ class _RoundedButtonWithRightActionArrowState
 }
 
 class RoundedButtonWithRightActionArrow extends StatefulWidget {
+  String _text;
+  IconData _icon;
+  RoundedButtonWithRightActionArrow(@required String text,@required IconData icon){
+    _text = text;
+    _icon = icon;
+  }
+
   @override
   State<StatefulWidget> createState() =>
-      _RoundedButtonWithRightActionArrowState();
+      _RoundedButtonWithRightActionArrowState(_text,_icon);
 }
+
+
