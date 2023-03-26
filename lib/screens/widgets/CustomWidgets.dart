@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/portfolio.dart';
 import 'package:portfolio/screens/MoreAboutMe.dart';
+import 'package:portfolio/screens/Portfolio.dart';
+import 'package:portfolio/screens/Projects.dart';
 import 'package:portfolio/theme/AppFonts.dart';
 import 'package:portfolio/util/AppNavigator.dart';
 import 'package:portfolio/util/utils.dart';
@@ -91,61 +93,14 @@ class PortfolioWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
 
     return Container(
-        margin: EdgeInsets.symmetric(horizontal: 12.0),
-        decoration: BoxDecoration(
-          color: item.color,
-          borderRadius: BorderRadius.all(
-            Radius.circular(
-              8,
-            ),
-          ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            CircleAvatar(
-              radius: 50,
-              backgroundColor: Colors.transparent,
-              child: ClipOval(
-                child: Image.asset(
-                  "assets/images/${item.image}",
-                  width: screenSize.width / 6,
-                  height: screenSize.width / 6,
-                ),
-              ),
-            ),
-            Text(
-              item.name,
-              style: TextStyle(
-                fontSize: isMobile()
-                    ? ResponsiveFlutter.of(context).fontSize(2)
-                    : ResponsiveFlutter.of(context).fontSize(2.5),
-                color: Colors.black,
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                item.description,
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  fontSize: isMobile()
-                      ? ResponsiveFlutter.of(context).fontSize(
-                          1.2,
-                        )
-                      : ResponsiveFlutter.of(context).fontSize(
-                          1.5,
-                        ),
-                  color: Colors.black,
-                ),
-              ),
-            )
+            Image(image: AssetImage('images/portfolio/arabits-1.webp'),
+            width: 200,height: 600,),
           ],
         ));
   }
@@ -252,7 +207,7 @@ class _RoundedButtonWithRightActionArrowState
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        AppNavigator.navigate(context, MoreAboutMe());
+
       },
       onHover: _handleHover,
       // hoverColor: AppColors.appYellow,

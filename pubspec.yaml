@@ -17,7 +17,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   url_launcher: ^5.7.10
-  carousel_slider: ^3.0.0
+  carousel_slider: ^4.2.1
   responsive_flutter: ^0.0.4
 
 dev_dependencies:

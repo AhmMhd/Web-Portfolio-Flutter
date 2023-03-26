@@ -1,6 +1,7 @@
 import 'package:portfolio/models/portfolio.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/screens/widgets/CustomWidgets.dart';
+import 'package:portfolio/theme/AppColors.dart';
 
 List<Widget> portfolioList = [
   PortfolioWidget(
@@ -38,7 +39,7 @@ List<Widget> portfolioList = [
 
   PortfolioWidget(
       item: ItemPortfolio(
-        color: Colors.blue[100],
+        color: AppColors.appYellow,
         image: "ic_pvc.webp",
         name: "Pocket Voice Coach",
         description:"The Pocket Voice Coach was created to help you overcome the two most common speaking issues that hold you back from advancing in your career and in life — talking too fast and mumbling your message. Have fun testing your speed and pronunciation.",)),
