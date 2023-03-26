@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/theme/AppColors.dart';
 import 'package:responsive_flutter/responsive_flutter.dart';
@@ -11,13 +12,15 @@ class FeatureProject extends StatelessWidget {
   final List<String> techStack;
   final List<String> contribution;
   final List<String> images;
+  final Function onTap;
 
   FeatureProject(
       {this.projectDesc,
       this.projectTitle,
       this.techStack,
       this.contribution,
-      this.images});
+      this.images,
+      this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -112,89 +115,93 @@ class FeatureProject extends StatelessWidget {
     );
   }
 
-  ClipRRect ProjectMediaClip(Size size) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(12.0),
-      child: Container(
-        height: size.height * 0.40,
-        width: size.width * 0.4,
-        color: AppColors.appYellow,
-        child: Stack(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ClipRRect(
-                  child: Padding(
+  InkWell ProjectMediaClip(Size size) {
+    return InkWell(
+      onTap: onTap,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12.0),
+        child: Container(
+          height: size.height * 0.40,
+          width: size.width * 0.4,
+          color: AppColors.appYellow,
+          child: Stack(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ClipRRect(
+                    child: Padding(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: Image(
+                          fit: BoxFit.contain,
+                          image: AssetImage(images[0]),
+                        ),
+                      ),
+                      padding: EdgeInsets.all(12),
+                    ),
+                  ),
+                  Padding(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12.0),
                       child: Image(
                         fit: BoxFit.contain,
-                        image: AssetImage(images[0]),
+                        image: AssetImage(images[1]),
                       ),
                     ),
                     padding: EdgeInsets.all(12),
                   ),
-                ),
-                Padding(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12.0),
-                    child: Image(
-                      fit: BoxFit.contain,
-                      image: AssetImage(images[1]),
-                    ),
-                  ),
-                  padding: EdgeInsets.all(12),
-                ),
-                Padding(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12.0),
-                    child: Image(
-                      fit: BoxFit.contain,
-                      image: AssetImage(images[2]),
-                    ),
-                  ),
-                  padding: EdgeInsets.all(12),
-                ),
-              ],
-            ),
-            Positioned(
-              child: Container(
-                color: AppColors.projectDescriptionBackgroundColor,
-                width: size.width * 0.4,
-                child: Padding(
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CustomText(
-                        text: projectTitle,
-                        textsize: 18,
-                        color: AppColors.appWhite,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 1,
+                  Padding(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12.0),
+                      child: Image(
+                        fit: BoxFit.contain,
+                        image: AssetImage(images[2]),
                       ),
-                      Container(
-                        child: Wrap(
-                          alignment: WrapAlignment.end,
-                          children: [
-                            CustomText(
-                              text: projectDesc,
-                              textsize: 14,
-                              color: AppColors.appWhite,
-                              fontWeight: FontWeight.normal,
-                              letterSpacing: 1,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
+                    ),
+                    padding: EdgeInsets.all(12),
+                  ),
+                ],
+              ),
+              Positioned(
+                child: Container(
+                  color: AppColors.projectDescriptionBackgroundColor,
+                  width: size.width * 0.4,
+                  child: Padding(
+                    padding: EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        RichText(
+                            text: TextSpan(
+                                text: projectTitle,
+                                style: TextStyle(
+                                  color: AppColors.appWhite,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                ))),
+                        Container(
+                          child: Wrap(
+                            alignment: WrapAlignment.end,
+                            children: [
+                              CustomText(
+                                text: projectDesc,
+                                textsize: 14,
+                                color: AppColors.appWhite,
+                                fontWeight: FontWeight.normal,
+                                letterSpacing: 1,
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
+                bottom: 0,
               ),
-              bottom: 0,
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
